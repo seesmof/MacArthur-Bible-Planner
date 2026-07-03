@@ -1,8 +1,51 @@
+import Item from "@/components/Item";
+
+const steps = [
+  "1 John",
+  "John 1-7",
+  "John 8-14",
+  "John 15-21",
+  "Philippians",
+  "Matthew 1-7",
+  "Matthew 8-14",
+  "Matthew 15-21",
+  "Matthew 22-28",
+  "Ephesians",
+  "Luke 1-8",
+  "Luke 9-17",
+  "Luke 18-24",
+  "Galatians; Philemon",
+  "Acts 1-7",
+  "Acts 8-14",
+  "Acts 15-21",
+  "Acts 22-28",
+  "Colossians; Jude",
+  "Mark 1-8",
+  "Mark 9-16",
+  "1 and 2 Timothy",
+  "Romans 1-8",
+  "Romans 9-16",
+  "1 and 2 Peter",
+  "1 Corinthians 1-8",
+  "1 Corinthians 9-16",
+  "1 and 2 Thess.",
+  "2 Corinthians 1-7",
+  "2 Corinthians 8-13",
+  "James",
+  "Hebrews 1-7",
+  "Hebrews 8-13",
+  "Titus; 2 John, 3 John",
+  "Revelation 1-8",
+  "Revelation 9-15",
+  "Revelation 16-22",
+];
+
 export default function IndexPage() {
   return (
-    <div className="p-3">
-      <div>1 John</div>
-      <div>John 1-7</div>
+    <div className="p-3 flex flex-col gap-3">
+      {steps.map((step, index) => (
+        <Item key={index} name={step} />
+      ))}
     </div>
   );
 }
