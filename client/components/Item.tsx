@@ -13,10 +13,8 @@ export default function Item({ name }: ItemProps) {
   useEffect(() => {
     const count = localStorage.getItem(name);
     console.log(count);
-    if (count) {
-      setCount(Number.parseInt(count));
-    } else setCount(0);
-  }, [name]);
+    if (count && !Number.isNaN(count)) setCount(Number.parseInt(count));
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(name, count.toString());
